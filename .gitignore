@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.httr-oauth
+
+# Raw data and static HTML notebook 01_preprocess_log_files
+data/raw/*
+01_preprocess_log_files.html
