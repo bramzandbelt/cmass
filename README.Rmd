@@ -146,7 +146,11 @@ For a complete list of the packrat Packrat takes care of dependencies.
 
 ## Acknowledgment
 
+<<<<<<< HEAD
 This research project was funded through a James McDonnell Scholar Award (grant number 220020328) to Roshan Cools. We thank Roshan Cools (RC) for financial support and constructive feedback on conceptualization. We thank Patrick G. Bissett (PGB), Jeffrey D. Schall (JDS), and Gordon D. Logan (GDL) for constructive feedback on on conceptualization. We thank Ben Marwick for inspiration on [how to create, organize, and describe research compendia](https://github.com/benmarwick/researchcompendium).
+=======
+This research project was funded through a James McDonnell Scholar Award (grant number 220020328) to Roshan Cools. We thank Roshan Cools (RC) for financial support and constructive feedback on conceptualization. We thank Patrick G. Bissett, Jeffrey D. Schall, and Gordon D. Logan for constructive feedback on on conceptualization. We thank Ben Marwick for inspiration on [how to create, organize, and describe research compendia](https://github.com/benmarwick/researchcompendium).
+>>>>>>> d046510ecdd611494a533fe1e2c329fbcd3651e7
 
 ## Contributor roles
 
