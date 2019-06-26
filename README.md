@@ -1,5 +1,5 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--06--26-brightgreen.svg)](https://github.com/bramzandbelt/irmass/commits/master) [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-brightgreen.svg)](https://cran.r-project.org/) <!-- [![DOI](https://zenodo.org/badge/49258308.svg)](https://zenodo.org/badge/latestdoi/49258308) --> [![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)](http://choosealicense.com/licenses/mit/) [![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--6491--1247-green.svg)](https://orcid.org/0000-0002-6491-1247)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--06--26-brightgreen.svg)](https://github.com/bramzandbelt/irmass/commits/master) [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-brightgreen.svg)](https://cran.r-project.org/) [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.3257505.svg)](https://zenodo.org/badge/doi/10.5281/zenodo.3257505.svg) [![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)](http://choosealicense.com/licenses/mit/) [![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--6491--1247-green.svg)](https://orcid.org/0000-0002-6491-1247)
 
 cmass - Data set for computational modeling analysis of selective stopping
 ==========================================================================
@@ -7,7 +7,8 @@ cmass - Data set for computational modeling analysis of selective stopping
 Dataset DOI
 -----------
 
-<!-- TODO: Add Zenodo DOI -->
+[DOI: 10.5281/zenodo.3257505](https://doi.org/10.5281/zenodo.3257505)
+
 The files at the URL above provide access to a dataset containing task performance data on a action-selective and stimulus-selective stop-signal task (10 participants, 6000 trials per participant). The data were collected for the purpose of developing a computational model of selective stopping, but due to lack of resources (time in particular) and a career switch (leaving academia) the project did not get off the ground.
 
 Authors of this repository
