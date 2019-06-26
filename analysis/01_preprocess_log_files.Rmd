@@ -1,0 +1,134 @@
+---
+params:
+  title: "01_preprocess_log_files"
+title: '`r stringr::str_replace_all(params$title, pattern = "_", replacement = " ")`'
+author: "Bram B. Zandbelt"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true 
+    number_sections: true
+    depth: 4
+    df_print: paged
+    theme: readable
+    highlight: pygments
+---
+
+```{r setup, include=FALSE}
+# Set root dir to project directory to ensure that code is always run relative to the project directory, no matter if it is run using `knitr` or interactively.
+knitr::opts_knit$set(root.dir = rprojroot::find_root(rprojroot::has_file("cmass.Rproj")))
+
+# Attach tideverse package to enable access to pipe (%>%)
+require(tidyverse)
+```
+
+# Overview 
+
+# Preliminaries
+
+## Identify the project directory
+All paths in the code are relative to the project directory.
+```{r Define project directory}
+project_dir <- rprojroot::find_root(rprojroot::has_file("cmass.Rproj"))
+```
+
+## Define and verify existence of output directories
+```{r Define and verify existence of output directories}
+
+derivatives_dir <- file.path(project_dir,"data","derivatives")
+notebook_name <- params$title
+
+irmass::verify_output_dirs(base_dirs = list(derivatives_dir),
+                           notebook_name = notebook_name)
+```
+
+# Read data
+
+Read the trial log files
+```{r Read log files}
+
+# Make an empty tibble
+performance_data <- 
+  tibble::tibble()
+
+for (i_subj in seq(0,10)) {
+  for (i_sess in seq(0,4)) {
+    
+    # Report progress
+    print(sprintf("Working on subject %.2d, session %.2d", i_subj, i_sess))
+    
+    # Read data
+    current_performance_data <- 
+      Sys.glob(file.path(project_dir,
+                         "data",
+                         "raw",
+                         sprintf("subj%.2d", i_subj),
+                         sprintf("sess%.2d_*", i_sess),
+                         "triallog*.csv")) %>%
+      purrr::map_df(~readr::read_csv(.x,
+                                     col_types = irmass::get_col_types("log_trial_cols")
+                                     )
+                    )
+    
+    if (i_sess == 0) {
+      current_performance_data <- 
+        current_performance_data %>%
+        dplyr::filter(blockId %in% sprintf('e%.3d', seq(0,11)))
+    } else if (i_sess == 1) {
+      current_performance_data <- 
+        current_performance_data %>%
+        dplyr::filter(blockId %in% sprintf('e%.3d', seq(12,23)))
+    } else if (i_sess == 2) {
+      current_performance_data <- 
+        current_performance_data %>%
+        dplyr::filter(blockId %in% sprintf('e%.3d', seq(24,35)))
+    } else if (i_sess == 3) {
+      current_performance_data <- 
+        current_performance_data %>%
+        dplyr::filter(blockId %in% sprintf('e%.3d', seq(36,47)))
+    } else if (i_sess == 4) {
+      current_performance_data <- 
+        current_performance_data %>%
+        dplyr::filter(blockId %in% sprintf('e%.3d', seq(48,59)))
+    }
+    
+    # If i_subj == 10 and i_sess == 0, modify subjectIx that was logged incorrectly
+    if (i_subj == 10 & i_sess == 0) {
+      current_performance_data <-
+        current_performance_data %>%
+        dplyr::mutate(subjectIx = 10)
+    }
+    
+    performance_data <- 
+      dplyr::bind_rows(performance_data,
+                       current_performance_data)
+  }
+}
+```
+
+# Clean data
+
+```{r Tidy the data}
+# Tidy the data a bit, leaving in only relevant columns
+tidy_performance_data <- 
+  irmass::tidy_trial_data(performance_data, 
+                          analysis_type = 'exploratory')
+
+# Make also one tibble containing both resp and RT data
+tidy_performance_data_all <- 
+  dplyr::left_join(tidy_performance_data$resp_df,
+                   tidy_performance_data$RT_df,
+                   by = base::intersect(colnames(tidy_performance_data$resp_df), 
+                                        colnames(tidy_performance_data$RT_df)))
+```
+
+# Write data
+
+```{r Write tidied and preprocessed block and trial data}
+readr::write_csv(tidy_performance_data_all,
+                 path = file.path(derivatives_dir, 
+                                  notebook_name, 
+                                  'tidy_expt_trial_resp_and_rt_data.csv'),
+                 col_names = TRUE)
+```
