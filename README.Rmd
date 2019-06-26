@@ -146,25 +146,25 @@ For a complete list of the packrat Packrat takes care of dependencies.
 
 ## Acknowledgment
 
-This research project was funded through a James McDonnell Scholar Award (grant number 220020328) to Roshan Cools. We thank Roshan Cools (RC) for financial support and constructive feedback and Alexandra Sebastian (AS) for providing statistical parametric maps for the purpose of sample size estimation. We thank Ben Marwick for inspiration on [how to create, organize, and describe research compendia](https://github.com/benmarwick/researchcompendium).
+This research project was funded through a James McDonnell Scholar Award (grant number 220020328) to Roshan Cools. We thank Roshan Cools (RC) for financial support and constructive feedback on conceptualization. We thank Patrick G. Bissett (PGB), Jeffrey D. Schall (JDS), and Gordon D. Logan (GDL) for constructive feedback on on conceptualization. We thank Ben Marwick for inspiration on [how to create, organize, and describe research compendia](https://github.com/benmarwick/researchcompendium).
 
 ## Contributor roles
 
 We specify the contribution of all people involved in the research (contributing non-authors included), according to the [Contributor Role Taxonomy](https://www.casrai.org/credit/).
 
-|                              | BBZ | RvdB | RC  |
-| ---------------------------- | --- | ---- | --- |
-| Conceptualization            | X   | -    | -   |
-| Methodology                  | X   | -    | -   |
-| Software                     | X   | -    | -   |
-| Validation                   | X   | -    | -   |
-| Formal analysis              | X   | -    | -   |
-| Investigation                | -   | X    | -   |
-| Resources                    | X   | -    | -   |
-| Data curation                | X   | -    | -   |
-| Supervision                  | X   | -    | -   |
-| Project administration       | -   | X    | -   |
-| Funding acquisition          | -   | -    | X   |
+|                              | BBZ | RvdB | RC  | PGB | JDS | GDL |
+| ---------------------------- | --- | ---- | --- | --- | --- | --- |
+| Conceptualization            | X   | -    | -   | X   | X   | X   |
+| Methodology                  | X   | -    | -   | -   | -   | -   |
+| Software                     | X   | -    | -   | -   | -   | -   |
+| Validation                   | X   | -    | -   | -   | -   | -   |
+| Formal analysis              | X   | -    | -   | -   | -   | -   |
+| Investigation                | -   | X    | -   | -   | -   | -   |
+| Resources                    | X   | -    | -   | -   | -   | -   |
+| Data curation                | X   | -    | -   | -   | -   | -   |
+| Supervision                  | X   | -    | -   | -   | -   | -   |
+| Project administration       | -   | X    | -   | -   | -   | -   |
+| Funding acquisition          | -   | -    | X   | -   | -   | -   |
 
 ## Contact
 
