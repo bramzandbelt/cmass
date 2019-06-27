@@ -1,5 +1,5 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--06--26-brightgreen.svg)](https://github.com/bramzandbelt/irmass/commits/master) [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-brightgreen.svg)](https://cran.r-project.org/) [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.3257505.svg)](https://zenodo.org/badge/doi/10.5281/zenodo.3257505.svg) [![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)](http://choosealicense.com/licenses/mit/) [![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--6491--1247-green.svg)](https://orcid.org/0000-0002-6491-1247)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--06--27-brightgreen.svg)](https://github.com/bramzandbelt/irmass/commits/master) [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-brightgreen.svg)](https://cran.r-project.org/) [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.3257505.svg)](https://zenodo.org/badge/doi/10.5281/zenodo.3257505.svg) [![Licence](https://img.shields.io/github/license/mashape/apistatus.svg)](http://choosealicense.com/licenses/mit/) [![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--6491--1247-green.svg)](https://orcid.org/0000-0002-6491-1247)
 
 cmass - Data set for computational modeling analysis of selective stopping
 ==========================================================================
@@ -85,7 +85,7 @@ Brief overview of methods
 
 ### Participants
 
-We recruited a total of 11 participants (for demographics, see: `documents/content/sample_characteristics.csv`) through an online database for subjects interested in participating in research at the Donders Institute and Behavioral Science Institute of Radboud University (Sona Systems Ltd., Tallinn, Estonia). One participants was excluded, because they failed to bring performance in line with pre-set task performance criteria during the practice session. All participants had normal or corrected to normal vision and did report no history of neurological or psychiatric illness or claustrophobia. The study procedures were in accordance with the Declaration of Helsinki \[@WorldMedicalAssociation2013\] and were approved by the local ethics committee (Committee on Research Involving Human Subjects Arnhem-Nijmegen, registered under CMO2014/088). Written informed consent was obtained from all participants before enrollment in the study.
+We recruited a total of 11 participants (for demographics, see: `documents/content/sample_characteristics.csv`) through an online database for subjects interested in participating in research at the Donders Institute and Behavioral Science Institute of Radboud University (Sona Systems Ltd., Tallinn, Estonia). One participants was excluded, because they failed to bring performance in line with pre-set task performance criteria during the practice session. All participants had normal or corrected to normal vision and did report no history of neurological or psychiatric illness or claustrophobia. The study procedures were in accordance with the [Declaration of Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/) and were approved by the local ethics committee (Committee on Research Involving Human Subjects Arnhem-Nijmegen, registered under CMO2014/088). Written informed consent was obtained from all participants before enrollment in the study.
 
 ### Task
 
@@ -119,7 +119,7 @@ In each session, participants performed 12 blocks of 100 trials, with trials in 
 
 ### Data acquisition
 
-The experiment was run in PsychoPy \[@Peirce2007, @Peirce2008, release 1.83.04\] running under Windows 7 on a Dell Precision T3500 computer with two Intel Xeon Quad Core 2.80 GHz processors and 12 GB of RAM. Visual stimuli were projected on a screen positioned approximately 70 cm from the subject. Responses were collected using two MR-compatible fiber-optic response pads (Current Designs, Inc; Philadelphia, PA, USA), one for each hand.
+The experiment was run in [PsychoPy](http://www.psychopy.org/) (release 1.83.04) running under Windows 7 on a Dell Precision T3500 computer with two Intel Xeon Quad Core 2.80 GHz processors and 12 GB of RAM. Visual stimuli were projected on a screen positioned approximately 70 cm from the subject. Responses were collected using two MR-compatible fiber-optic response pads (Current Designs, Inc; Philadelphia, PA, USA), one for each hand.
 
 How to use
 ----------
@@ -160,7 +160,7 @@ devtools::session_info()
 #>  collate  en_US.UTF-8                 
 #>  ctype    en_US.UTF-8                 
 #>  tz       Europe/Amsterdam            
-#>  date     2019-06-26                  
+#>  date     2019-06-27                  
 #> 
 #> ─ Packages ──────────────────────────────────────────────────────────────
 #>  package     * version date       lib source        
